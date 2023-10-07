@@ -1,0 +1,185 @@
+*{
+  
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    background-color: #101E2C;
+}
+.wrapper{
+    background-color: #172a3c;
+    padding: 40px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+
+.wrapper .inputBox h2{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.wrapper .inputBox form{
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color:#ffffff;
+    align-items: center;
+    
+
+}
+.wrapper .inputBox form #inputField{
+
+height: 60px;
+padding: 30px;
+resize: none;
+font-size: 20px;
+border-radius: 8px;
+background-color: #264159;
+color:#fff;
+border: none;
+width: 90%;
+}
+.wrapper .inputBox form #inputField::placeholder{
+    color:#ffffff47;
+}
+.wrapper .inputBox form #submitBTN{
+    width: 200px;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #3685ca;
+    border: none;
+    color: #fff;
+    transition: .4s;
+}
+.wrapper .inputBox form #submitBTN:hover{
+    background-color: #fff;
+    color: #264159;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+/* Output Css  */
+
+
+.inputBox .task .content{
+    background-color: #264159;
+    border: 1px solid #3685ca54;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.inputBox .task #outputList{
+    flex-basis: 70%;
+    background-color: transparent;
+    border: none;
+    color: #deefff;
+    font-size: 17px;
+}
+.inputBox .task .content .actions{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.inputBox .task .content .actions .edit{
+    background-color: #3685ca;
+    color: #fff;
+    border: none;
+    padding: 3px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .4s;
+}
+.inputBox .task .content .actions .edit:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #3685ca;
+    transition: .4s;
+}
+.inputBox .task .content .actions .delete{
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    padding: 3px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .4s;
+}
+.inputBox .task .content .actions .delete:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: tomato;
+    transition: .4s;
+}
+#alertred{
+    display: inline-block;
+    width: 100%;
+    color: rgb(255, 81, 50);
+    margin-top: 15px;
+   
+}
+#success{
+    
+    width: 100%;
+    color: rgb(0, 208, 0);
+    margin-top: 15px;
+}
+.outputcss{
+    max-height: 300px;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+
+/* scrollbar  */
+
+#style-8::-webkit-scrollbar-track
+{
+ border: 1px solid #3685ca;
+ background-color: #F5F5F5;
+}
+
+#style-8::-webkit-scrollbar
+{
+ width: 5px;
+ background-color: #F5F5F5;
+}
+
+#style-8::-webkit-scrollbar-thumb
+{
+ background-color: #3685ca;  
+}
+
+
+
+
+
+
+/* bobile responsive  */
+
+@media (max-width:600px) {
+    .inputBox .task .content .actions{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: start;
+
+        
+    }
+    .inputBox .task .content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+   
+}
