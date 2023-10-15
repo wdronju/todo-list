@@ -32,6 +32,9 @@ body{
     
 
 }
+#totalAmount, #withoutFiverr, #TotalBdTaka, #amountforRonju, #amountforShorna{
+    padding-left:20px;
+    }
 .wrapper .inputBox form #inputField{
 
 height: 60px;

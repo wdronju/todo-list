@@ -6,6 +6,8 @@ const AllTask = document.querySelector(".task")
 
 let redAlert = document.getElementById("alertred");
 let successAlert = document.getElementById("success");
+
+const arr = [];
 // form Event
 
 taskForm.addEventListener("submit",(e)=>{
@@ -28,11 +30,46 @@ taskForm.addEventListener("submit",(e)=>{
       
 
     //   Creating a  input  field 
-    const input = document.createElement("input");
+
+    const input = document.createElement("input");                         
     input.type="text";
     input.setAttribute("id", "outputList");
     input.value=(taskInput.value);
+
     input.setAttribute("readonly", "readonly");
+
+
+    // Creat an Array in push the values in the array 
+    let singleNumber =input.value;
+    arr.push(singleNumber);
+    
+
+    let totalPrice = 0;
+    arr.forEach(numberItem =>{
+        totalPrice = totalPrice+ parseInt(numberItem) ;
+        let discountPercentage = 20; // 20%
+        let discount = (totalPrice * discountPercentage) / 100;
+        let discountedAmount = totalPrice - discount;
+        let totalBDTakaMultiply = discountedAmount * 110;
+        let halfofAmout = totalBDTakaMultiply /2;
+
+        
+
+        let totalAmount = document.getElementById("totalAmount");
+        let withoutFiverr = document.getElementById("withoutFiverr");
+        let TotalBdTaka = document.getElementById("TotalBdTaka");
+        let amountforRonju = document.getElementById("amountforRonju");
+        let amountforShorna = document.getElementById("amountforShorna");
+        totalAmount.innerHTML=totalPrice;
+        withoutFiverr.innerHTML=discountedAmount;
+        TotalBdTaka.innerHTML=totalBDTakaMultiply;
+        amountforRonju.innerHTML=halfofAmout;
+        amountforShorna.innerHTML=halfofAmout;
+    });
+
+
+
+
 
     // Adding the input  fild into content div 
 
@@ -78,13 +115,19 @@ taskForm.addEventListener("submit",(e)=>{
     }
     // condition end 
     
-    
-    console.log(taskInput.value);
-
+  
 
 
     // to make empty the input field 
     taskInput.value="";
 });
+
+
+let perinputValu = (parseInt(taskInput.value));
+console.log(perinputValu + perinputValu);
+// let totalAmount =  document.getElementById("totalAmount");
+// parseInt(taskInput.value) - (parseInt(taskInput.value) * 0.2);
+// document.getElementById("totalAmount");
+// totalAmount.innerHTML=totalAmount;
 
 

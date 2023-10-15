@@ -11,14 +11,23 @@
 
 <div class="wrapper">
     <div class="inputBox">
-        <h2 id="testid">ToDo List</h2>
+        <h2 id="testid">Pyment calculation:</h2>
+        <!-- <span style="color:#fff">Total USD: <b id="totalusd"></b></span><br><br> -->
         <form action="" id="taskForm">
 
        
-            <textarea placeholder="Write Your first Task..." name="inputField" id="inputField" cols="30" rows="20"></textarea>
+            <input type="number" placeholder="input your  project  amount.." name="inputField" id="inputField" cols="30" rows="20"/>
             <small id="alertred"></small>
             <small id="success"></small>
-            <input type="submit" value="Add Task" id="submitBTN">
+            <input type="submit" value="Calculate Amount" id="submitBTN">
+<br><br>
+            <div class="calculatedAmountBox">
+                <span>Total Amount: $</span><span id="totalAmount"></span><br><br><hr><br>
+                <span>Without Fiverr 20%: $</span><span id="withoutFiverr"></span><br><br><hr><br>
+                <span>BD Taka Coverted Amount (1$ = 110 Taka):</span><span id="TotalBdTaka"></span><br><br><hr><br>
+                <span>Amount of 50% for Ronju:</span><span id="amountforRonju"></span><br><br><hr><br>
+                <span>Amount of 50% for Swarna:</span><span id="amountforShorna"></span>
+            </div>
             
         </form>
     </div>
